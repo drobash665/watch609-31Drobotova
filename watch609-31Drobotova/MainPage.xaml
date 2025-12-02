@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="watch609_31Drobotova.MainPage"
+             Background="#000000">
+
+    <AbsoluteLayout>
+
+        <!-- Внешний круг (фон) -->
+        <Ellipse
+            AbsoluteLayout.LayoutBounds="0.5,0.5,320,320"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Stroke="#222222"
+            StrokeThickness="8"
+            Fill="Transparent"/>
+
+        <!-- Внутренний круг (10 делений) -->
+        <Ellipse
+            AbsoluteLayout.LayoutBounds="0.5,0.5,280,280"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Stroke="#444444"
+            StrokeThickness="1"
+            StrokeDashArray="5,45"
+            Fill="Transparent"/>
+
+        <!-- Прогресс-бар (10 секунд) -->
+        <Ellipse
+            x:Name="ProgressCircle"
+            AbsoluteLayout.LayoutBounds="0.5,0.5,304,304"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Stroke="#FFFFFF"
+            StrokeThickness="12"
+            StrokeDashArray="0,1000"
+            Fill="Transparent"/>
+
+        <!-- Основное время -->
+        <Label 
+            x:Name="TimeLabel"
+            AbsoluteLayout.LayoutBounds="0.5,0.45,-1,-1"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="00:00:00"
+            FontSize="64"
+            FontAttributes="Bold"
+            TextColor="#FFFFFF"
+            FontFamily="Segoe UI"/>
+
+        <!-- Секунды (10-секундный цикл) -->
+        <Label 
+            x:Name="CycleLabel"
+            AbsoluteLayout.LayoutBounds="0.5,0.6,-1,-1"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="0/9"
+            FontSize="28"
+            TextColor="#FFBCD9"
+            FontFamily="Segoe UI"/>
+
+    </AbsoluteLayout>
+</ContentPage>
